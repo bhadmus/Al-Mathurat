@@ -1,0 +1,50 @@
+name: complete_al_mathurat_app
+description: A Flutter application for Al-Mathurat adhkar.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  provider: ^6.0.3
+  shared_preferences: ^2.0.15
+  intl: ^0.19.0
+  flutter_local_notifications: ^17.2.3
+  audioplayers: ^6.1.0
+  excel: ^4.0.6
+  # arabic_font: ^0.0.9
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    # - assets/images/al_mathurat_logo.png
+    - assets/images/morning_background.png
+    - assets/images/evening_background.png
+    - assets/images/landing_page_background.png
+    - assets/images/app_icon_foreground.png
+    - assets/al_mathurat_database.xlsx
+    - assets/icon/app_icon.jpeg
+    # - assets/icon/app_icon_foreground.png
+
+  fonts:
+    - family: Mirza
+      fonts:
+        - asset: assets/fonts/Mirza-Regular.ttf
+        - asset: assets/fonts/Mirza-Bold.ttf
+        - asset: assets/fonts/Mirza-Medium.ttf
+        - asset: assets/fonts/Mirza-SemiBold.ttf
+        - asset: assets/fonts/AmiriQuran-Regular.ttf
+          weight: 500
