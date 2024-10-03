@@ -3,7 +3,7 @@ description: A Flutter application for Al-Mathurat adhkar.
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-version: 1.0.0+1
+version: 1.0.0+3
 
 environment:
   sdk: ">=2.17.0 <3.0.0"
@@ -25,6 +25,11 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^5.0.0
   flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"  
+  ios: true
+  image_path: "assets/icon/app_icon.jpeg"
 
 flutter:
   uses-material-design: true
