@@ -22,4 +22,4 @@ Simply tap the toggle button on the main screen to switch between Morning and Ev
 Yes, the app is completely free to download and use.
 
 **4. Where can I report bugs or issues?**
-Please [submit an issue](https://github.com/Al-Mathurat/issues) or email us at bhadmusautomates@gmail.com.
+Please [submit an issue](https://github.com/bhadmus/Al-Mathurat/issues) or email us at bhadmusautomates@gmail.com.
