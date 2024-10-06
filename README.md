@@ -1,16 +1,25 @@
-# complete_al_mathurat_app
+# Welcome to Al-Mathurat Daily Support Page
 
-A new Flutter project.
+**Al-Mathurat Daily** is your companion for reciting the morning and evening dhikr (remembrances). This app provides a selection of verses from the Quran and authentic Dhikrs taught by the Prophet Muhammad (peace be upon him). Recite in the morning or the evening with ease.
 
-## Getting Started
+## Features:
+- Morning and Evening Dhikr
+- Clean, simple interface
+- Available in Arabic, Transliteration, and English languages
 
-This project is a starting point for a Flutter application.
+[Download on the App Store](https://appstorelink.com)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Frequently Asked Questions (FAQ)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**1. What is Al-Mathurat Daily?**
+Al-Mathurat Daily is a mobile app that contains a collection of morning and evening Dhikr recited by the Prophet Muhammad (peace be upon him).
+
+**2. How do I navigate between Morning and Evening Dhikr?**
+Simply tap the toggle button on the main screen to switch between Morning and Evening Dhikr.
+
+**3. Is the app available for free?**
+Yes, the app is completely free to download and use.
+
+**4. Where can I report bugs or issues?**
+Please [submit an issue](https://github.com/Al-Mathurat/issues) or email us at bhadmusautomates@gmail.com.
