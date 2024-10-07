@@ -15,7 +15,8 @@ class LandingPage extends StatelessWidget {
             Container(
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/images/landing_page_background.png'),
+                  image:
+                      AssetImage('assets/images/landing_page_background.png'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -30,19 +31,28 @@ class LandingPage extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.of(context).pushReplacement(
-                          MaterialPageRoute(builder: (context) => const MainMenu()),
+                          MaterialPageRoute(
+                              builder: (context) => const MainMenu()),
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white.withOpacity(0.2),
-                        foregroundColor: Colors.white,
-                        padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                        backgroundColor: Colors.black,
+                        foregroundColor: Colors.black,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 50, vertical: 15),
                         textStyle: const TextStyle(fontSize: 18),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30),
                         ),
                       ),
-                      child: const Text('Get Started'),
+                      child: const Text(
+                        'Get Started',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                        ),
+                        ),
                     ),
                   ),
                   const SizedBox(height: 50),
