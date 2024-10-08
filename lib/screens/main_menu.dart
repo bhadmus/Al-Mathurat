@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../main.dart';
 import 'morning_adhkar.dart';
 import 'evening_adhkar.dart';
+import 'hadith_daily.dart';
+import '../widgets/time_display.dart';
 
 class MainMenu extends StatelessWidget {
   const MainMenu({super.key});
@@ -29,22 +31,49 @@ class MainMenu extends StatelessWidget {
         elevation: 4,
       ),
       body: GradientBackground(
-        child: Center(
+        child: SafeArea(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              _buildMenuButton(
-                context,
-                'Morning Adhkar',
-                'assets/images/morning_background.png',
-                const MorningAdhkar(),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 16),
+                child: DateTimeDisplay(),
               ),
-              const SizedBox(height: 20),
-              _buildMenuButton(
-                context,
-                'Evening Adhkar',
-                'assets/images/evening_background.png',
-                const EveningAdhkar(),
+              Expanded(
+                child: LayoutBuilder(
+                  builder: (context, constraints) {
+                    double tileSize = constraints.maxWidth * 0.4;
+                    return Center(
+                      child: Wrap(
+                        spacing: 20,
+                        runSpacing: 20,
+                        alignment: WrapAlignment.center,
+                        children: [
+                          _buildMenuButton(
+                            context,
+                            'Hadith Daily',
+                            'assets/images/hadith_daily.png',
+                            const HadithDaily(),
+                            tileSize,
+                          ),
+                          _buildMenuButton(
+                            context,
+                            'Morning Adhkar',
+                            'assets/images/morning_background.png',
+                            const MorningAdhkar(),
+                            tileSize,
+                          ),
+                          _buildMenuButton(
+                            context,
+                            'Evening Adhkar',
+                            'assets/images/evening_background.png',
+                            const EveningAdhkar(),
+                            tileSize,
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
               ),
             ],
           ),
@@ -53,7 +82,8 @@ class MainMenu extends StatelessWidget {
     );
   }
 
-  Widget _buildMenuButton(BuildContext context, String title, String backgroundImage, Widget destination) {
+  Widget _buildMenuButton(BuildContext context, String title,
+      String backgroundImage, Widget destination, double size) {
     return GestureDetector(
       onTap: () {
         Navigator.push(
@@ -62,14 +92,14 @@ class MainMenu extends StatelessWidget {
         );
       },
       child: Container(
-        width: 200,
-        height: 200,
+        width: size,
+        height: size,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(backgroundImage),
             fit: BoxFit.cover,
           ),
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(15),
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.3),
@@ -82,9 +112,10 @@ class MainMenu extends StatelessWidget {
         child: Center(
           child: Text(
             title,
+            textAlign: TextAlign.center,
             style: const TextStyle(
               color: Colors.white,
-              fontSize: 24,
+              fontSize: 20,
               fontWeight: FontWeight.bold,
               shadows: [
                 Shadow(
